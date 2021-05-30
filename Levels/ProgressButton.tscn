@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://GUI/Reward/ProgressButton.gd" type="Script" id=1]
+
+[node name="ProgressButton" type="Button"]
+margin_left = 464.0
+margin_top = 440.0
+margin_right = 568.0
+margin_bottom = 472.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 72.0
+margin_bottom = 14.0
+text = "SKIP REWARD"
+[connection signal="button_down" from="." to="." method="_on_ProgressButton_button_down"]

@@ -1,0 +1,114 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Cards/CardFrames/CardFrame.png" type="Texture" id=1]
+[ext_resource path="res://GUI/Options/DeckListMenu/DeckListCardButton.gd" type="Script" id=2]
+[ext_resource path="res://Cards/CardGUI/CardAttack.png" type="Texture" id=3]
+[ext_resource path="res://Cards/FireCard/FireCardSprite.png" type="Texture" id=4]
+[ext_resource path="res://Cards/CardGUI/CardDefense-1.png.png" type="Texture" id=5]
+[ext_resource path="res://Cards/ComboSprites/leftAll.png" type="Texture" id=6]
+[ext_resource path="res://Minecraft.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 7 )
+
+[node name="DeckListCardButton" type="TextureButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -874.0
+margin_bottom = -400.0
+rect_min_size = Vector2( 150, 200 )
+texture_normal = ExtResource( 1 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CardArtRect" type="TextureRect" parent="."]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 60.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 150, 100 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ComboModeRect" type="TextureRect" parent="."]
+margin_left = 45.0
+margin_top = 125.0
+margin_right = 115.0
+margin_bottom = 195.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DefenseRect" type="TextureRect" parent="."]
+modulate = Color( 0.54902, 0.694118, 1, 1 )
+margin_top = 180.0
+margin_right = 30.0
+margin_bottom = 210.0
+rect_min_size = Vector2( 25, 25 )
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DefenseLabel" type="RichTextLabel" parent="DefenseRect"]
+margin_left = 3.0
+margin_top = 10.0
+margin_right = 28.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 25, 25 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]0[/center]"
+text = "0"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AttackRect" type="TextureRect" parent="."]
+modulate = Color( 1, 0.631373, 0.631373, 1 )
+margin_left = 125.0
+margin_top = 180.0
+margin_right = 155.0
+margin_bottom = 210.0
+rect_min_size = Vector2( 25, 25 )
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AttackLabel" type="RichTextLabel" parent="AttackRect"]
+margin_left = 3.0
+margin_top = 10.0
+margin_right = 28.0
+margin_bottom = 35.0
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]0[/center]"
+text = "0"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_down" from="." to="." method="_on_DeckListCardButton_button_down"]

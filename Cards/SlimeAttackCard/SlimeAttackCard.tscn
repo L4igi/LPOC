@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Cards/Card.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Cards/SlimeAttackCard/SlimeAttackCard.gd" type="Script" id=2]
+[ext_resource path="res://Cards/SlimeAttackCard/SlimeAttackSprite.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=2]
+resource_name = "default"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "default" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[node name="SlimeAttackCard" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="CardArt" parent="CardFrame" index="2"]
+position = Vector2( -7.15256e-07, -16.8 )
+scale = Vector2( 0.884615, 0.825 )
+frames = SubResource( 1 )
+
+[node name="CardArtAnimationPlayer" parent="CardFrame/CardArt" index="0"]
+anims/default = SubResource( 2 )

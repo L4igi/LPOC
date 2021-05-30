@@ -1,0 +1,113 @@
+{
+	"SwordCard": {
+		"damage": 4,
+		"defense": 5,
+		"status": "NONE",
+		"statusPoints": 0,
+		"attackTarget": "RANDOMALL",
+		"defenseTarget": "SELF",
+		"statusTarget": "ALL",
+		"comboMode": "LEFTRIGHTADJACENT",
+		"cardTypes": {
+			"cardType1": "WEAPON"
+		},
+		"trinketInteractions": {
+			"trinketinteraction1": "WHETSTONE",
+			"trinketinteraction2": "SHIVBAG"
+		}
+	},
+	"SwordAttackCardCombo": {
+		"damage": 4,
+		"defense": 0,
+		"status": "NONE",
+		"statusPoints": 0,
+		"attackTarget": "RANDOMALL",
+		"defenseTarget": "SELF",
+		"statusTarget": "ALL",
+		"comboMode": "LEFTRIGHTADJACENT",
+		"cardTypes": {
+			"cardType1": "WEAPON"
+		},
+		"trinketInteractions": {
+			"trinketinteraction1": "WHETSTONE",
+			"trinketinteraction2": "SHIVBAG"
+		}
+	},
+	"FireCard": {
+		"damage": 4,
+		"defense": 0,
+		"status": "NONE",
+		"statusPoints": 0,
+		"attackTarget": "RANDOMALL",
+		"defenseTarget": "SELF",
+		"statusTarget": "ALL",
+		"comboMode": "LEFTRIGHTADJACENT",
+		"cardTypes": {
+			"cardType1": "FIRE"
+		},
+		"trinketInteractions": {
+			"trinketinteraction1": "WHETSTONE",
+			"trinketinteraction2": "SHIVBAG"
+		}
+	},
+	"MatchStickCard": {
+		"damage": 4,
+		"defense": 0,
+		"status": "NONE",
+		"statusPoints": 0,
+		"attackTarget": "RANDOMALL",
+		"defenseTarget": "SELF",
+		"statusTarget": "ALL",
+		"comboMode": "LEFTRIGHTADJACENT",
+		"cardTypes": {
+			"cardType1": "WOOD"
+		},
+		"trinketInteractions": {
+			"trinketinteraction1": "WHETSTONE",
+			"trinketinteraction2": "SHIVBAG"
+		}
+	},
+	"RainCloudCard": {
+		"damage": 4,
+		"defense": 0,
+		"status": "NONE",
+		"statusPoints": 0,
+		"attackTarget": "RANDOMALL",
+		"defenseTarget": "SELF",
+		"statusTarget": "ALL",
+		"comboMode": "LEFTRIGHTADJACENT",
+		"cardTypes": {
+			"cardType1": "WATER"
+		},
+		"trinketInteractions": {
+			"trinketinteraction1": "WHETSTONE",
+			"trinketinteraction2": "SHIVBAG"
+		}
+	},
+	"SlimeAttackCard": {
+		"damage": 4,
+		"defense": 0,
+		"status": "NONE",
+		"statusPoints": 0,
+		"attackTarget": "PLAYER",
+		"defenseTarget": "SELF",
+		"statusTarget": "PLAYER",
+		"comboMode": "LEFTRIGHTADJACENT",
+		"cardTypes": {
+			"cardType1": "WEAPON"
+		}
+	},
+	"SlimeAttackCardCombo": {
+		"damage": 4,
+		"defense": 0,
+		"status": "NONE",
+		"statusPoints": 0,
+		"attackTarget": "PLAYER",
+		"defenseTarget": "SELF",
+		"statusTarget": "PLAYER",
+		"comboMode": "LEFTRIGHTADJACENT",
+		"cardTypes": {
+			"cardType1": "WEAPON"
+		}
+	}
+}

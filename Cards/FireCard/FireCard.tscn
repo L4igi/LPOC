@@ -1,0 +1,91 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Cards/Card.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Cards/FireCard/FireCard.gd" type="Script" id=2]
+[ext_resource path="res://Cards/FireCard/FireCardSprite.png" type="Texture" id=3]
+[ext_resource path="res://Cards/FireCard/sprite_4.png" type="Texture" id=4]
+[ext_resource path="res://Cards/FireCard/sprite_0.png" type="Texture" id=5]
+[ext_resource path="res://Cards/FireCard/sprite_2.png" type="Texture" id=6]
+[ext_resource path="res://Cards/FireCard/sprite_1.png" type="Texture" id=7]
+[ext_resource path="res://Cards/FireCard/sprite_3.png" type="Texture" id=8]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "water",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=2]
+resource_name = "default"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "default" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "water"
+length = 0.75
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "water" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.5, 0.65 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+
+[node name="FireCard" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="CardArt" parent="CardFrame" index="2"]
+position = Vector2( 0, -17.2 )
+scale = Vector2( 1, 0.8875 )
+frames = SubResource( 1 )
+
+[node name="CardArtAnimationPlayer" parent="CardFrame/CardArt" index="0"]
+anims/default = SubResource( 2 )
+anims/water = SubResource( 3 )

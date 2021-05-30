@@ -1,0 +1,27 @@
+{
+	"Player": {
+		"COMMON": {
+			"common1": "SwordCard",
+			"common2": "MatchStickCard"
+		},
+		"UNCOMMON": {
+			"uncommon1": "FireCard"
+		},
+		"RARE": {
+			"rare1": "RainCloudCard"
+		}
+	},
+
+	"PlayerMage": {
+		"COMMON": {
+			"common1": "SwordCard",
+			"common2": "MatchStickCard"
+		},
+		"UNCOMMON": {
+			"uncommon1": "FireCard"
+		},
+		"RARE": {
+			"rare1": "RainCloudCard"
+		}
+	}
+}

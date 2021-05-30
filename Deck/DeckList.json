@@ -1,0 +1,11 @@
+{
+	"PlayerDeck": {
+		"SwordCard": 1,
+		"FireCard": 5,
+		"MatchStickCard": 2,
+		"RainCloudCard": 5
+	},
+	"SlimeDeck": {
+		"SlimeAttackCard": 5
+	}
+}
